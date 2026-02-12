@@ -1,2 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
 @import "tailwindcss";
 
+@theme {
+    /* TYPOGRAPHY */
+    --font-brico: 'Bricolage Grotesque';
+
+    /* COLORS */
+    --color-pomegranate: #B31C5D;
+}
+
+@layer base {
+    /* header hierarchy */
+    h1 {
+        @apply text-4xl font-bold;
+    }
+    h2 {
+        @apply text-3xl font-semibold;
+    }
+    h3 {
+        @apply text-2xl font-medium;
+    }
+    h4 {
+        @apply text-xl font-normal;
+    }
+    h5 {
+        @apply text-lg italic;
+    }
+    h6 {
+        @apply text-lg font-light;
+    }
+
+    p {
+        @apply text-base;
+    }
+}
+
+body {
+    @apply font-brico w-screen h-screen;
+}
