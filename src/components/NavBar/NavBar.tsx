@@ -31,7 +31,7 @@ export default function NavBar() {
     }
 
     return (
-        <nav className="md:h-[10vh] px-4 bg-amber-50 flex flex-col gap-4 md:flex-row items-start md:items-end justify-between" role="navigation">
+        <nav className="md:h-[10vh] max-w-full px-4 bg-amber-50 flex flex-col gap-4 md:flex-row items-start md:items-end justify-between" role="navigation">
             {/* name section */}
             <div className="text-nowrap self-center">
                 <a href="#" className="text-pomegranate text-4xl" onClick={handleHomeClick}>Magali Lapu</a>
@@ -43,7 +43,7 @@ export default function NavBar() {
                     <a href={item.href} key={item.id} className="nav-link" onClick={() => handleActiveTab(`#${item.id}`)} aria-current={activeTab === `#${item.id}` ? 'page' : undefined}>
                         <div className={`flex justify-center pb-1 md:pb-2 rounded-t-lg text-lg md:text-2xl h-[50%] transition-all duration-200
                             ${activeTab === `#${item.id}`
-                                ? 'bg-pomegranate text-white font-medium italic pt-2'
+                                ? 'bg-pomegranate text-white font-medium pt-2'
                                 : 'hover:bg-pomegranate/20 hover:pt-0.5'
                             }
                         `}>
