@@ -37,5 +37,5 @@
 }
 
 body {
-    @apply font-brico w-screen h-screen;
+    @apply font-brico;
 }
