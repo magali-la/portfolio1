@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=M+PLUS+Rounded+1c:wght@700;800;900&family=Righteous&display=swap');
 
 @import "tailwindcss";
 
 @theme {
     /* TYPOGRAPHY */
+    /* main */
     --font-brico: 'Bricolage Grotesque';
+    /* postcard main */
+    --font-mplus: 'M PLUS Rounded 1c';
+    /* postcard greetings - deco */
+    --font-right: 'Righteous';
 
     /* COLORS */
     --color-pomegranate: #B31C5D;
@@ -38,4 +43,75 @@
 
 body {
     @apply font-brico;
+}
+
+/* postcard main text */
+.postcard-main {
+    @apply font-mplus font-black relative z-10;
+    /* smooth responsive font scaling */
+    font-size: clamp(4rem, 20vw, 16rem);
+    /* width - condensed text */
+    letter-spacing: -0.06em;
+    /* line spacing for break */
+    line-height: 0.8em;
+    /* set to transparent so the image can fill the space  */
+    color: transparent;  
+
+    /* rotate it counter */
+    transform: rotate(-8deg);
+}
+
+/* 3d block pseudo */
+.postcard-main::before {
+    /* the text taking this styling is an attribute on the h1 in hero */
+    content: attr(data-text);
+    
+    /* it's absolute to the main text but a level under*/
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    /* each shadow forms a stacked 3d block */
+    text-shadow: 
+        1px 1px 0px black, 2px 2px 0px black, 3px 3px 0px black, 4px 4px 0px black, 5px 5px 0px black, 6px 6px 0px black, 7px 7px 0px black, 8px 8px 0px black, 9px 9px 0px black, 10px 10px 0px black, 11px 11px 0px black, 12px 12px 0px black, 13px 13px 0px black, 14px 14px 0px black, 15px 15px 0px black, 16px 16px 0px black, 17px 17px 0px black, 18px 18px 0px black, 19px 19px 0px black, 20px 20px 0px black;
+}
+
+/* black border and white border on text */
+.postcard-main::after {
+    content: attr(data-text);
+
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    /* image config */
+    background-image: url("https://images.unsplash.com/photo-1540212321383-9900828a00c1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position-y: 10%;
+    background-clip: text;
+
+    /* white inner text stroke */
+    -webkit-text-stroke: 2px white;
+
+    /* black outline - which takes into account the white text stroke by being applied after it renders apply it twice to get rid of glow */
+    filter: drop-shadow(0px 0px 1px black) drop-shadow(0px 0px 1px black);
+}
+
+.postcard-greet {
+    @apply font-right font-bold;
+}
+
+/* postcard texture styling */
+.postcard-texture {
+    @apply z-20 pointer-events-none absolute inset-0;
+    background-image: url("/textures/risotext.png");
+    /* make it smaller so it can repeat */
+    background-repeat: repeat;
+    background-size: 16rem;
+
+    /* blend mode & effects */
+    mix-blend-mode: hard-light;
+
+    opacity: 0.8;
+    filter: contrast(1.1) brightness(1);
 }

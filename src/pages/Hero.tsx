@@ -22,21 +22,24 @@ export default function Hero() {
     }
 
     return (
-        <div className="h-[40vh] min-h-[40vh] sm:h-[60vh] sm:min-h-[60vh] md:h-[50vh] md:min-h-[50vh] bg-white">
+        <div className="h-[65vh] sm:h-[70vh] md:h-[80vh] lg:h-[85vh] bg-white">
             {showIntro ? (
                 <IntroOverlay onFinish={handleIntroFinish}/>
             ) : (
-                <motion.div className="h-full flex flex-col items-center justify-between p-10"
+                <motion.div className="h-full flex flex-col items-center justify-between p-10 bg-rose-400 outline-[1.5rem] outline-rose-200/80 -outline-offset-[1.5rem] shadow-pink-900 shadow-2xl relative"
                 // motion fade in
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2, ease: "easeOut" }}
                 >
-                    <p className="self-start">greetings from</p>
-                    <div>
-                        <h1 className="text-6xl sm:text-9xl text-center">Magali Lapu</h1>
+                    {/* texture div */}
+                    <div className="postcard-texture">
                     </div>
-                    <p className="self-end">Full Stack Software Engineer</p>
+                    <p className="self-start postcard-greet text-lg md:text-xl lg:text-3xl xl:text-5xl">Greetings from</p>
+                    <div>
+                        <h1 className="text-center postcard-main" data-text="MAGALI LAPU">MAGALI<br/>LAPU</h1>
+                    </div>
+                    <p className="self-end postcard-greet text-right text-lg md:text-xl lg:text-3xl xl:text-4xl">Full Stack Software Engineer</p>
                 </motion.div> 
             )}
             
