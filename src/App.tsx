@@ -1,15 +1,15 @@
 import { motion } from "motion/react"
-import NavBar from "./components/NavBar/NavBar"
 import Hero from "./pages/Hero"
+import NavBar2 from "./components/NavBar/NavBar2"
 
 export default function App() {
   
   return (
-    <motion.div className="bg-pomegranate min-h-screen w-full">
-      <NavBar/>
+    <motion.div className="min-h-screen w-full">
+      <NavBar2/>
 
       {/* hero */}
-      <Hero/>
+      <div className="mt-24"><Hero/></div>
 
       {/* about section */}
 

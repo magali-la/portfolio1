@@ -2,6 +2,9 @@
 
 @import "tailwindcss";
 
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+
 @theme {
     /* TYPOGRAPHY */
     /* main */
@@ -13,6 +16,33 @@
 
     /* COLORS */
     --color-pomegranate: #B31C5D;
+
+    /* background + main text */
+    --color-cream: #FFF4D8;
+    --color-coffee: #372428;
+
+    /* pinks - dark to light */
+    --color-salmon: #F05469;
+    --color-bubblegum: #EC9EAE;
+
+    /* oranges - dark to light */
+    --color-autumn: #BA5523;
+    --color-peach: #EF988F;
+
+    /* greens - d to l */
+    --color-cactus: #127C3C;
+    --color-tiff: #61B38B;
+
+    /* blues - d to l */
+    --color-wave: #376879;
+    --color-teal: #65A7A8;
+
+    /* purple */
+    --color-eggplant: #885E86;
+
+    /* SHADOWS */
+    /* custom 3d block for elements */
+    --shadow-3d: 6px 5px 0px var(--color-coffee);
 }
 
 @layer base {
@@ -41,8 +71,12 @@
     }
 }
 
+html {
+    @apply scroll-smooth;
+}
+
 body {
-    @apply font-brico;
+    @apply font-brico bg-tiff/40;
 }
 
 /* postcard main text */
