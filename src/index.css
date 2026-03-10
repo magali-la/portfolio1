@@ -149,3 +149,17 @@ body {
     opacity: 0.8;
     filter: contrast(1.1) brightness(1);
 }
+
+/* noise texture styling */
+.noise-texture {
+    @apply z-20 pointer-events-none absolute inset-0;
+    background-image: url("/textures/noisetext.png");
+    /* make it smaller so it can repeat */
+    background-repeat: repeat;
+    background-size: 6rem;
+
+    /* blend mode & effects */
+    mix-blend-mode: overlay;
+
+    opacity: 0.8;
+}
