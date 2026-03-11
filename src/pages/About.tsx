@@ -3,7 +3,6 @@ import { useState } from "react"
 import bookColor from "../assets/bookhalf.png"
 import bookPink from "../assets/bookduo.png"
 import stickerColor from "../assets/stickerhalf.png"
-import stickerPink from "../assets/stickerduo.png"
 import stickerDark from "../assets/stickerduoblk.png"
 
 export default function About() {

@@ -1,5 +1,4 @@
 import { motion } from "motion/react"
-import IntroOverlay from "../components/IntroOverlay";
 import { useEffect, useState } from "react";
 
 export default function Hero() {

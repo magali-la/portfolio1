@@ -3,7 +3,6 @@ import Hero from "./pages/Hero"
 import NavBar2 from "./components/NavBar/NavBar2"
 import About from "./pages/About"
 import Skills from "./pages/Skills"
-import SkillTag from "./components/skills/SkillTag"
 
 export default function App() {
   

@@ -1,5 +1,12 @@
 import { useState } from "react";
 
+// interface for NavLink array
+interface NavLink {
+    id: string;
+    label: string;
+    href: string;
+}
+
 export default function NavBar2() {
     // set active tab in state for conditional styling
     const [activeTab, setActiveTab] = useState<string>('');
