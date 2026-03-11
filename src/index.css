@@ -20,6 +20,7 @@
     /* background + main text */
     --color-cream: #FFF4D8;
     --color-coffee: #372428;
+    --color-coffeebean: #25181B;
 
     /* pinks - dark to light */
     --color-salmon: #F05469;
@@ -43,6 +44,9 @@
     /* SHADOWS */
     /* custom 3d block for elements */
     --shadow-3d: 6px 5px 0px var(--color-coffee);
+    /* smaller shadow for skill tags and buttons */
+    --shadow-3d-sm: 4px 3px 0px var(--color-coffee);
+    --shadow-3d-dark: 4px 3px 0px var(--color-coffeebean);
 }
 
 @layer base {
@@ -162,4 +166,38 @@ body {
     mix-blend-mode: overlay;
 
     opacity: 0.8;
+}
+
+/* plastic texture for skills tags */
+.plastic-texture {
+    @apply z-20 pointer-events-none absolute inset-0;
+    background-image: url("/textures/plastic.png");
+    background-size: 10rem;
+    background-position-y: 60%;
+
+    mix-blend-mode: difference;
+    opacity: 0.3;
+    filter: contrast(1.2) brightness(1.2);
+}
+
+/* shadow for the hole on the skills tag */
+.skill-hole {
+    /* offset shadow for realism */
+    box-shadow: 0.7px 0.5px 3px var(--color-coffee);
+}
+
+/* this is the actual hole punched through */
+.skill-hole::after {
+    /* there's not really content so set it to an empty string */
+    content: '';
+    /* sizing & shape */
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+
+    /* color it like the tiff/40 bg */
+    background: #C0E1D1;
+
+    /* inner shadow for realism - inset, x, y, spread */
+    box-shadow: inset 1px 2px 3px rgba(55, 36, 40, 0.627);
 }

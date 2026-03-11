@@ -2,6 +2,8 @@ import { motion } from "motion/react"
 import Hero from "./pages/Hero"
 import NavBar2 from "./components/NavBar/NavBar2"
 import About from "./pages/About"
+import Skills from "./pages/Skills"
+import SkillTag from "./components/skills/SkillTag"
 
 export default function App() {
   
@@ -16,7 +18,8 @@ export default function App() {
       <div className="flex justify-center mt-20"><About/></div>
 
       {/* skills */}
-
+      <div className="flex justify-center mt-20">
+        <Skills/></div>
       {/* projects */}
 
       {/* contact */}
