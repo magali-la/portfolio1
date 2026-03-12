@@ -4,6 +4,7 @@ import NavBar2 from "./components/NavBar/NavBar2"
 import About from "./pages/About"
 import Skills from "./pages/Skills"
 import Projects from "./pages/Projects"
+import Contact from "./pages/Contact"
 
 export default function App() {
   
@@ -22,7 +23,9 @@ export default function App() {
 
       {/* projects */}
       <div className="mt-20"><Projects/></div>
+
       {/* contact */}
+      <div className="mt-20"><Contact/></div>
     </motion.div>
   )
 }
