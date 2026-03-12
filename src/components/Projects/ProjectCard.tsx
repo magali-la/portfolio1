@@ -5,17 +5,21 @@ import StackTag from "./StackTag";
 
 // the project card holds both columns - the postcard stack and the general description, so it needs to pass down whatever project is being mapped in Projects.tsx
 interface ProjectCardProps {
-    project: Project
+    project: Project,
+    index: number
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({ project, index }: ProjectCardProps) {
     return (
-        <div className="flex flex-col md:flex-row items-start gap-10 w-full">
+        // add conditional based on index to flip the stack and details - need both flex row & flex-row reverse!!
+        <div className={`flex flex-col lg:flex-row ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''} items-center lg:items-stretch w-full`}>
             {/* postcard stack - left */}
-            <PostcardStack project={project}/>
+            <div className="flex flex-1 justify-center">
+                <PostcardStack project={project}/>
+            </div>
 
             {/* project details - right */}
-            <div className="flex flex-col gap-4 sm:gap-6 w-full">
+            <div className={`flex flex-1 flex-col w-full sm:w-3/4 gap-4 sm:gap-6 lg:items-start lg:pl-20 ${index % 2 !== 0 ? 'lg:pt-12 lg:pr-10' : 'lg:pt-6'}`}>
                 <h3 className="text-3xl">{project.title}</h3>
                 <p className="text-lg">{project.desc}</p>
 
