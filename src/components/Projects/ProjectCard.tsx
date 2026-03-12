@@ -1,5 +1,6 @@
 import type { Project } from "../../data/portfolio";
 import PostcardStack from "./PostcardStack";
+import StackTag from "./StackTag";
 
 // the project card holds both columns - the postcard stack and the general description, so it needs to pass down whatever project is being mapped in Projects.tsx
 interface ProjectCardProps {
@@ -8,7 +9,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
     return (
-        <div className="flex flex-col md:flex-row items-start gap-10">
+        <div className="flex flex-col md:flex-row items-start gap-10 w-full">
             {/* postcard stack - left */}
             <PostcardStack project={project}/>
 
@@ -18,9 +19,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 <p className="text-lg">{project.desc}</p>
                 {/* tech stack - mapped tags*/}
                 <h4 className="text-2xl">Tech Stack</h4>
-                <div className="grid grid-cols-2 gap-x-6">
+                <div className="flex flex-wrap gap-2">
                     {project.stack.map((skill) => (
-                        <p className="text-lg">{skill}</p>
+                        <StackTag key={skill} name={skill} color={project.stackColor}/>
                     ))}
                 </div>
 

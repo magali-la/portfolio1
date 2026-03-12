@@ -83,6 +83,7 @@ export interface Project {
     title: string,
     desc: string,
     stack: string[],
+    stackColor: string,
     github: string,
     live: string,
     // postcard content
@@ -103,6 +104,7 @@ export const projects: Project[] = [
         title: "Healie App",
         desc: "description",
         stack: ["React", "JavaScript", "Google Firestore", "Tailwind CSS"],
+        stackColor: "bg-eggplant",
         github: "https://github.com/cherryontech/mint-chip",
         live: "https://mint-chip.netlify.app/",
         postcard: {
@@ -119,6 +121,7 @@ export const projects: Project[] = [
         title: "GoEasy",
         desc: "some description",
         stack: ["React", "TypeScript", "JavaScript", "Node.js", "Express", "MongoDB", "Mongoose", "OAuth", "JWT", "Axios", "Tailwind CSS", "Motion"],
+        stackColor: "bg-pomegranate",
         github: "https://github.com/magali-la/goeasy-app",
         live: "https://goeasy-travel.vercel.app/",
         postcard: {    
