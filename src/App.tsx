@@ -14,15 +14,15 @@ export default function App() {
 
       {/* hero */}
       <div className="mt-24"><Hero/></div>
-
-      {/* about section */}
-      <div className="flex justify-center mt-20"><About/></div>
+      
+      {/* projects */}
+      <div className="mt-20"><Projects/></div>
 
       {/* skills */}
       <div className="flex justify-center mt-20"><Skills/></div>
 
-      {/* projects */}
-      <div className="mt-20"><Projects/></div>
+      {/* about section */}
+      <div className="flex justify-center mt-20"><About/></div>
 
       {/* contact */}
       <div className="mt-20"><Contact/></div>

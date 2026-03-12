@@ -3,7 +3,7 @@ import SkillTag from "../components/skills/SkillTag";
 
 export default function Skills() {
     return (
-        <section id="skills" aria-label="skills section" className="flex flex-col items-center">
+        <section id="skills" aria-label="skills section" className="flex flex-col items-center scroll-mt-24">
             <h2 className="text-pomegranate font-black text-4xl">Skills</h2>
             
             {/* skills grid */}

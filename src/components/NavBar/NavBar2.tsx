@@ -13,11 +13,11 @@ export default function NavBar2() {
     // state for mobile nav manu
     const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
 
-    // list of nav link objects - TODO: figure out if it's single page sections or swap of components for site nav
+    // list of nav link objects
     const navLinks: NavLink[] = [
-        {id: 'about', label: 'About', href: '#about'},
-        {id: 'skills', label: 'Skills', href: '#skills'},
         {id: 'projects', label: 'Projects', href: '#projects'},
+        {id: 'skills', label: 'Skills', href: '#skills'},
+        {id: 'about', label: 'About', href: '#about'},
         {id: 'contact', label: 'Contact', href: '#contact'}
     ]
 
@@ -39,7 +39,7 @@ export default function NavBar2() {
 
     return (
         <div className="w-full flex justify-center fixed top-2 z-100">
-            <nav className="flex flex-row justify-center items-center backdrop-blur-[1px] backdrop-saturate-200 rounded-2xl gap-10 px-6 py-3 border-2 border-coffee/20 bg-cream/40 shadow-3d relative">
+            <nav className="flex flex-row justify-center items-center backdrop-blur-lg backdrop-saturate-200 rounded-2xl gap-10 px-6 py-3 border-2 border-coffee/20 bg-cream/40 shadow-3d relative">
                 {/* name */}
                 <div className="">
                     <a href="#" className="text-pomegranate text-2xl md:text-3xl font-semibold" onClick={handleHomeClick}>Magali Lapu</a>
