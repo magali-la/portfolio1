@@ -3,6 +3,7 @@ import Hero from "./pages/Hero"
 import NavBar2 from "./components/NavBar/NavBar2"
 import About from "./pages/About"
 import Skills from "./pages/Skills"
+import Projects from "./pages/Projects"
 
 export default function App() {
   
@@ -17,10 +18,10 @@ export default function App() {
       <div className="flex justify-center mt-20"><About/></div>
 
       {/* skills */}
-      <div className="flex justify-center mt-20">
-        <Skills/></div>
-      {/* projects */}
+      <div className="flex justify-center mt-20"><Skills/></div>
 
+      {/* projects */}
+      <div className="mt-20"><Projects/></div>
       {/* contact */}
     </motion.div>
   )

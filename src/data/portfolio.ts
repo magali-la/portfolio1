@@ -74,3 +74,63 @@ export const categories: SkillCategory[] = [
         ],
     },
 ];
+
+// 2. PROJECTS DATA
+// interface for shape of project object
+export interface Project {
+    id: string,
+    // main content
+    title: string,
+    desc: string,
+    stack: string[],
+    github: string,
+    live: string,
+    // postcard content
+    postcard: {
+        teaser: string,
+        type: string,
+        focus: string,
+        status: string,
+        frontImg: string,
+    }     
+}
+
+// PROJECTS
+export const projects: Project[] = [
+    // Healie
+    {
+        id: "healie",
+        title: "Healie App",
+        desc: "description",
+        stack: ["React", "JavaScript", "Google Firestore", "Tailwind CSS"],
+        github: "https://github.com/cherryontech/mint-chip",
+        live: "https://mint-chip.netlify.app/",
+        postcard: {
+            teaser: "A 4-month cross-functional project designed for women in tech",
+            type: "Burnout Reduction Tool",
+            focus: "Accessibility",
+            status: "Ongoing, Post-MVP",
+            frontImg: "/healie/landing.png",
+        } 
+    },
+    // GoEasy
+    {
+        id: "goeasy",
+        title: "GoEasy",
+        desc: "some description",
+        stack: ["React", "TypeScript", "JavaScript", "Node.js", "Express", "MongoDB", "Mongoose", "OAuth", "JWT", "Axios", "Tailwind CSS", "Motion"],
+        github: "https://github.com/magali-la/goeasy-app",
+        live: "https://goeasy-travel.vercel.app/",
+        postcard: {    
+            teaser: "A travel planning tool for budget-conscious explorers",
+            type: "Budget Travel Plannner",
+            focus: "Full Stack, UX-Forward",
+            status: "Live",
+            frontImg: "/healie/landing.png",
+        } 
+    },
+
+    // Afribite
+
+    // 
+]
