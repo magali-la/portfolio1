@@ -47,6 +47,9 @@ export const categories: SkillCategory[] = [
             { name: "Postman", color: "bg-pomegranate" },
             { name: "GitHub Copilot", color: "bg-autumn" },
             { name: "Figma", color: "bg-eggplant" },
+            { name: "Adobe Suite", color: "bg-coffee" },
+            { name: "Jira", color: "bg-cactus" },
+            { name: "Trello", color: "bg-wave" },
         ],
     },
     {
@@ -98,42 +101,55 @@ export interface Project {
 
 // PROJECTS
 export const projects: Project[] = [
+    // GoEasy
+    {
+        id: "goeasy",
+        title: "GoEasy",
+        desc: "A full stack budget travel planning app where I implemented dual authentication with local and Google OAuth 2.0 using httpOnly cookie-based token storage, designed a RESTful API with Express and Node.js, and built a selective Mongoose population strategy to serve nested relational data efficiently.",
+        stack: ["React", "TypeScript", "JavaScript", "CSS3", "Node.js", "Express", "MongoDB", "Mongoose", "OAuth", "JWT", "Axios", "Tailwind CSS", "Tailwind Variants", "Motion", "Figma", "Trello"],
+        stackColor: "bg-pomegranate",
+        github: "https://github.com/magali-la/goeasy-app",
+        live: "https://goeasy-travel.vercel.app/",
+        postcard: {    
+            teaser: "A travel app for budget-conscious explorets who plan their spending before they go",
+            type: "Budget Travel Planner",
+            focus: "Full Stack, UX-Forward",
+            status: "Live",
+            frontImg: "/goeasy/goeasytrips.png",
+        } 
+    },
     // Healie
     {
         id: "healie",
-        title: "Healie App",
-        desc: "description",
-        stack: ["React", "JavaScript", "Google Firestore", "Tailwind CSS"],
+        title: "Healie",
+        desc: "A burnout-reduction web app for women in tech, built over 4 months in two-week sprints with a team of 3 developers, 1 designer, and a PM. I owned the onboarding flow and dashboard, including sorting and displaying completed challenge entries for users' progress overview. I built a reusable button design system using Tailwind Variants API to standardize UI consistency across the app.",
+        stack: ["React", "JavaScript", "CSS3", "Google Firestore", "Tailwind CSS", "Tailwind Variants", "Jira"],
         stackColor: "bg-eggplant",
         github: "https://github.com/cherryontech/mint-chip",
         live: "https://mint-chip.netlify.app/",
         postcard: {
-            teaser: "A 4-month cross-functional project designed for women in tech",
+            teaser: "A web experience helping women in tech build a healthier work-life balance",
             type: "Burnout Reduction Tool",
             focus: "Accessibility",
             status: "Ongoing, Post-MVP",
             frontImg: "/healie/landing.png",
         } 
     },
-    // GoEasy
-    {
-        id: "goeasy",
-        title: "GoEasy",
-        desc: "some description",
-        stack: ["React", "TypeScript", "JavaScript", "Node.js", "Express", "MongoDB", "Mongoose", "OAuth", "JWT", "Axios", "Tailwind CSS", "Motion"],
-        stackColor: "bg-pomegranate",
-        github: "https://github.com/magali-la/goeasy-app",
-        live: "https://goeasy-travel.vercel.app/",
-        postcard: {    
-            teaser: "A travel planning tool for budget-conscious explorers",
-            type: "Budget Travel Plannner",
-            focus: "Full Stack, UX-Forward",
-            status: "Live",
-            frontImg: "/healie/landing.png",
-        } 
-    },
-
     // Afribite
-
-    // 
+    {
+        id: "afribite",
+        title: "Afribite",
+        desc: "A restaurant management app built over 4 weeks with a team of 4 developers and a UX team. I took ownership of the notification system, building scalable components with React hooks and dynamic order rendering, and implemented search functionality via Firestore queries to filter and retrieve order data in real time. Demo login on Admin tab: demo@gmail.com / demo123",
+        stack: ["React", "JavaScript", "Tailwind CSS", "CSS3", "Google Firestore"],
+        stackColor: "bg-autumn",
+        github: "https://github.com/magali-la/Afribite",
+        live: "https://afribitedemo.vercel.app/",
+        postcard: {
+            teaser: "A real-time order management tool built for small, family-owned restaurant teams",
+            type: "Restaurant Management",
+            focus: "Real-Time Data, UI Components",
+            status: "Live",
+            frontImg: "/afribite/afribitesearch.png",
+        }
+    }
 ]
