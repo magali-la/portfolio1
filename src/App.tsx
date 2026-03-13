@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next"
 import { motion } from "motion/react"
 import Hero from "./pages/Hero"
 import NavBar2 from "./components/NavBar/NavBar2"
@@ -10,6 +11,7 @@ export default function App() {
   
   return (
     <motion.div className="min-h-screen w-full">
+      <Analytics/>
       <NavBar2/>
 
       {/* hero */}
