@@ -1,4 +1,4 @@
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 import { motion } from "motion/react"
 import Hero from "./pages/Hero"
 import NavBar2 from "./components/NavBar/NavBar2"
