@@ -111,7 +111,7 @@ export const projects: Project[] = [
         github: "https://github.com/magali-la/goeasy-app",
         live: "https://goeasy-travel.vercel.app/",
         postcard: {    
-            teaser: "A travel app for budget-conscious explorets who plan their spending before they go",
+            teaser: "A travel app for budget-conscious explorers who plan their spending before they go",
             type: "Budget Travel Planner",
             focus: "Full Stack, UX-Forward",
             status: "Live",
